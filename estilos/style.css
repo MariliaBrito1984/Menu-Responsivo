@@ -22,7 +22,7 @@ body{
     margin: 0;
     background: url("../imagens/foto-de-fundo.jpg") no-repeat center center;    
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed;    
 }
 
 ::-webkit-scrollbar{
@@ -97,7 +97,7 @@ header > h1 {
     color: #014023;
     border-radius: 3px;
 }
-
+/*Configurações das Páginas*/
 
 main {
     width:80vw;     
@@ -157,15 +157,75 @@ div.tec img:hover{
     transform: translate(-3px, -3px);
 }
 
+article > a > h2{
+    background-color: #014023;
+    color: white;
+    font-weight: normal;
+    padding: 10px;    
+    font-size: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+article > a > h2:hover{
+    background-color: #d9b16654;
+    color: #014023;
+    font-weight: bold;
+    transform: translate(-2px, -2px);
+
+    transition: ease 0.2s;
+    
+}
+
+div > p{
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+#destaque{
+    border: 1px dashed #01402380;
+    background-color: #d9b16688;
+    border-radius: 5px;
+    padding: 20px;
+    color: black;
+    
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
 
+section.mov{
+    display: flex;
+    width: 90vw;
+    height: 400px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #014023;
 
+    align-items: center;
+    text-align: center;
+    
+}
+
+section.mov > p{    
+    font-size: 2em;
+    color: white;
+
+}
 
 
 footer {
     padding: 5px;
     background-color: #014023;
+    color: #D9B166;
+    font-size: 0.6em;
     text-align: center;
     position: static; /* Por padrão, estático */
     width: 100%;
@@ -178,6 +238,7 @@ footer {
 }
 
 /* Configuração das das setas nas páginas*/
+
 
 .arrow{
     display: inline-block;
@@ -195,6 +256,10 @@ footer {
 .section-content{
     display: none;
 }
+
+
+
+
 /*Configurações para telas maiores e impressão*/
 
 
@@ -217,6 +282,11 @@ footer {
         display: flex;
         height: 8vw;
         justify-content: center;
+        
+    }
+
+    header > h1{
+        font-size: 2em;        
     }
     .menu {
         display: flex;
@@ -228,11 +298,39 @@ footer {
         align-items: center;
     }
 
+    main{
+        width: 70vw;
+    }
+
+    article > p{
+        font-size: 1.5em;    
+    }
+
+    .menu li a{
+        font-size: 1.5em;  
+    }
     .nav-menu {
         width: auto;
         background: linear-gradient(to bottom, #014023, #94ac9e9f );
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.082);
 
-    }    
+    }  
     
+    footer{
+        padding: 10px;
+        font-size: 1em;
+    }    
+
+    section.mov{
+        display: flex;
+        width: 90vw;
+        height: 400px;
+        margin: auto;
+        margin-top: 10px;
+        background-color: #014023;
+    
+        align-items: center;
+        justify-content: center;
+        
+    }
 }
