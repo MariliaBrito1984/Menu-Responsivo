@@ -2,39 +2,68 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*Configurações Gerais*/
 
 * {
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background: url("../imagens/foto-de-fundo.jpg") no-repeat center center;    
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
 
 header {
-    width: auto;
-    background: linear-gradient(to top, #6C8C7A, #014023);
+    display: flex;    
+    width: 100vw;    
+    align-items: center;
+    background: #014023;
+    
     padding: 10px;
 }
 
-header > h1 {
+header > h1 {       
     font-family: "Merriweather", serif;
     font-weight: 900;
-    
+    transform: scale(1.5);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.671);
     letter-spacing: 0.2em;
-    text-align: center;
+    
     color: #D9B166;
-    font-size: 1em;
-    margin-bottom: 10px;
+    font-size: 1em;     
+    
+    margin-left: 100px;
 }
+
 
 .nav-menu {
-    width: auto;
-    position: relative;
-    padding: 10px;
+    width: auto;  
+    padding-left: 10px; 
+    padding-right: 10px;
+    padding-bottom: 10px;
+    position: relative; 
+    background-color: #014023;
+    
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined {       
     color: #D9B166;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.466);
     font-size: 24px;
@@ -69,19 +98,103 @@ header > h1 {
     border-radius: 3px;
 }
 
+
 main {
-    padding: 22px;
+    width:80vw;     
+    margin: auto;   
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: justify;
+
+    margin-bottom: 20px;
+    flex: 1;  
 }
+
+article{   
+    background-color: rgba(255, 255, 255, 0.466);
+    border-radius: 10px;    
+    padding: 10px;
+}
+
+article> h2{   
+    background-color: #014023;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #D9B166;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.671);
+    padding: 10px;
+    margin: -10px;    
+}
+
+article > p{
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+div.tec{
+    
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;  
+    
+    padding-bottom: 20px;
+}
+
+
+div.tec img{
+    width: 50px;
+    border-radius: 50%;   
+
+    transition: all ease .3s;
+}
+
+div.tec img:hover{
+    cursor: pointer;
+
+    transform: translate(-3px, -3px);
+}
+
+
+
+
+
+
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 5px;
+    background-color: #014023;
     text-align: center;
+    position: static; /* Por padrão, estático */
+    width: 100%;
+    
 }
 
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+}
 
+/* Configuração das das setas nas páginas*/
+
+.arrow{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 8px solid transparent;
+    border-left: 6px solid transparent;
+    border-right: 6px solid black;
+    border-top: 6px;
+
+    transition: transform 0.3s ease;
+
+}
+
+.section-content{
+    display: none;
+}
 /*Configurações para telas maiores e impressão*/
 
 
@@ -100,6 +213,11 @@ footer {
         display: none;
     }
 
+    header{
+        display: flex;
+        height: 8vw;
+        justify-content: center;
+    }
     .menu {
         display: flex;
         max-height: none;
@@ -109,4 +227,12 @@ footer {
         justify-content: space-around;
         align-items: center;
     }
+
+    .nav-menu {
+        width: auto;
+        background: linear-gradient(to bottom, #014023, #94ac9e9f );
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.082);
+
+    }    
+    
 }
