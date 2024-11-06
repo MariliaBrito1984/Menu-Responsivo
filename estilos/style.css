@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+header {
+    width: auto;
+    background: linear-gradient(to top, #6C8C7A, #014023);
+    padding: 10px;
+}
+
+header > h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.671);
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #D9B166;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.nav-menu {
+    width: auto;
+    position: relative;
+    padding: 10px;
+}
+
+.material-symbols-outlined {
+    color: #D9B166;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.466);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    background-color: #94ac9e9f;
+    border-radius: 3px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+.menu.active {
+    max-height: 200px; /* Ajuste conforme necessário */
+}
+
+.menu li a {
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.377);
+    font-weight: bold;
+    padding: 8px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    background-color: #F2E5BD;
+    color: #014023;
+    border-radius: 3px;
+}
+
+main {
+    padding: 22px;
+    text-align: justify;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Configurações para telas maiores e impressão*/
+
+
+
+@media print{
+    .material-symbols-outlined, .menu, .menu lu {
+        display: none;
+        
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .material-symbols-outlined {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        max-height: none;
+        padding: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.527);
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
