@@ -374,8 +374,8 @@ footer {
         
     }
 
-    section.mov{display: none};
-    section.slider{display: none;}
+    section{display: none};
+    section{display: none;}
     
 }
 
@@ -439,4 +439,4 @@ footer {
         justify-content: center;
         
     }
-}
+}  
