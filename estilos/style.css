@@ -47,9 +47,9 @@ header > h1 {
     letter-spacing: 0.2em;
     
     color: #D9B166;
-    font-size: 1em;     
+    font-size: 0.9em;     
     
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 
@@ -100,24 +100,45 @@ header > h1 {
 /*Configurações das Páginas*/
 
 main {
-    width:80vw;     
+    width:90vw;     
     margin: auto;   
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: justify;
-
-    margin-bottom: 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);    
     flex: 1;  
+}
+
+
+section.mov{
+    display: flex;
+    width: 90vw;
+    height: 200px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #014023;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);
+    align-items: center;
+    text-align: center;
+    
+}
+
+section.mov > p{    
+    font-size: 2em;
+    color: white;
+
 }
 
 article{   
     background-color: rgba(255, 255, 255, 0.466);
     border-radius: 10px;    
-    padding: 10px;
+    padding: 10px;    
 }
 
 article> h2{   
     background-color: #014023;
+    font-size: 19px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: #D9B166;
@@ -137,24 +158,44 @@ div.tec{
     
     display: flex;    
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;  
+    justify-content: space-around;
+    align-items: flex-start;       
     
-    padding-bottom: 20px;
 }
 
-
-div.tec img{
-    width: 50px;
-    border-radius: 50%;   
+div.tec-mov{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 
     transition: all ease .3s;
 }
 
-div.tec img:hover{
+div.tec-mov > p{
+    margin-left: 0;
+    padding: 0;
+    margin-top: 5px;
+    text-indent: 0;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.39);
+
+    box-sizing: border-box;
+}
+
+div.tec img{
+    width: 50px;
+    border-radius: 50%;  
+
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.425);
+
+}
+
+div.tec-mov:hover, 
+:focus{
     cursor: pointer;
 
-    transform: translate(-3px, -3px);
+    transform: translate(3px, 3px);
 }
 
 article > a > h2{
@@ -164,19 +205,17 @@ article > a > h2{
     padding: 10px;    
     font-size: 15px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;   
 
-    cursor: pointer;
-    transition: all ease 0.2s;
+    cursor: pointer; 
+    transition: all .3s;   
 }
 
-article > a > h2:hover{
+article > a > h2:hover, 
+article > a > h2:focus{
     background-color: #d9b16654;
     color: #014023;
-    font-weight: bold;
-    transform: translate(-2px, -2px);
-
-    transition: ease 0.2s;
+    font-weight: bold;     
     
 }
 
@@ -187,38 +226,27 @@ div > p{
     text-indent: 20px;
 }
 
-#destaque{
-    border: 1px dashed #01402380;
+article > h3{
+    border: 2px dashed #01402380;
     background-color: #d9b16688;
     border-radius: 5px;
     padding: 20px;
     color: black;
     
-    font-size: 16px;
+    font-size: 13px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-
-
-section.mov{
+article > h4{
     display: flex;
-    width: 90vw;
-    height: 400px;
-    margin: auto;
-    margin-top: 10px;
-    background-color: #014023;
-
-    align-items: center;
-    text-align: center;
-    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    float: right;
+    color: black;
+   
 }
 
-section.mov > p{    
-    font-size: 2em;
-    color: white;
-
-}
 
 
 footer {
@@ -240,18 +268,6 @@ footer {
 /* Configuração das das setas nas páginas*/
 
 
-.arrow{
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 8px solid transparent;
-    border-left: 6px solid transparent;
-    border-right: 6px solid black;
-    border-top: 6px;
-
-    transition: transform 0.3s ease;
-
-}
 
 .section-content{
     display: none;
@@ -270,6 +286,9 @@ footer {
         
     }
 
+    section.mov{display: none};
+
+    
 }
 
 
@@ -287,6 +306,10 @@ footer {
 
     header > h1{
         font-size: 2em;        
+    }
+
+    article > h2{
+       font-size: 1.5em;    
     }
     .menu {
         display: flex;
@@ -323,8 +346,8 @@ footer {
 
     section.mov{
         display: flex;
-        width: 90vw;
-        height: 400px;
+        width: 80vw;
+        height: 300px;
         margin: auto;
         margin-top: 10px;
         background-color: #014023;

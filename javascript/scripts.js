@@ -15,18 +15,24 @@ document.addEventListener("DOMContentLoaded", function () {
 /*Configuração de todas as páginas*/
 
 function toggleSection(element) {
-    const arrow = element.querySelector(".arrow");
-    const sectionContent = element.nextElementSibling;
-  
-    // Alterna a visibilidade do conteúdo
-    if (sectionContent.style.display === "none") {
+  const allSections = document.querySelectorAll(".section-content");
+  const sectionContent = element.nextElementSibling;
+
+  // Fecha todas as outras seções antes de abrir a atual
+  allSections.forEach(section => {
+      if (section !== sectionContent) {
+          section.style.display = "none";
+      }
+  });
+
+  // Alterna a visibilidade do conteúdo atual
+  if (sectionContent.style.display === "none" || sectionContent.style.display === "") {
       sectionContent.style.display = "block";
-      arrow.classList.add("up"); // Vira a seta para cima
-    } else {
+  } else {
       sectionContent.style.display = "none";
-      arrow.classList.remove("up"); // Vira a seta para baixo
-    }
   }
+}
+
 
 
   window.addEventListener("load", checkFooterPosition);
