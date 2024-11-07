@@ -405,8 +405,7 @@ fieldset.form{
     letter-spacing: 0.9px;    
     font-size: 22px;
     font-weight: bolder;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.473);
-    width: 90vw;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.473);    
     height: 400px;
     text-align: center;
 
@@ -434,8 +433,7 @@ fieldset.form{
 } 
 
 .redes-sociais{
-    display: flex;
-    width: 90vw;
+    display: flex;    
     height: 300px;
 
     color: #D9B166;
