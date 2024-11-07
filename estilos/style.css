@@ -109,25 +109,119 @@ main {
     flex: 1;  
 }
 
+/* Configuração do carrossel*/
 
-section.mov{
-    display: flex;
-    width: 90vw;
-    height: 200px;
-    margin: auto;
+
+section.slider{    
+    margin: 0 auto;    
+    width:90vw;
+    height: 300px;    
     margin-top: 10px;
     background-color: #014023;
     border-radius: 5px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);
-    align-items: center;
-    text-align: center;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);    
+
+    overflow: hidden;    
+}
+
+.slides{
+    display: flex;
+    width: 400%;
+    height: 300px;
+}
+
+.slides input{display: none;}
+
+.slide{
+    position: relative;
+    width: 25%;
+
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    
+}
+.manual-navigation{
+    position: absolute;
+    display: flex;    
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 250px;
+    
+    
+    justify-content: center;
+    
+}
+.manual-btn{
+   border: 2px solid #014023;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer; 
+
+   transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 30px;
     
 }
 
-section.mov > p{    
-    font-size: 2em;
-    color: white;
+.manual-btn:hover{
+    background-color: rgb(20, 235, 20);
+}
 
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #D9B166;
+    padding: 5px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    margin-top: 250px;
+    left: 50%;
+
+    transform: translate(-50%);     
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 30px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: rgb(20, 235, 20);    
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: rgb(20, 235, 20);    
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: rgb(20, 235, 20);    
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: rgb(20, 235, 20);    
 }
 
 article{   
@@ -247,6 +341,9 @@ article > h4{
    
 }
 
+.section-content{
+    display: none;
+}
 
 
 footer {
@@ -264,15 +361,6 @@ footer {
     position: fixed;
     bottom: 0;
 }
-
-/* Configuração das das setas nas páginas*/
-
-
-
-.section-content{
-    display: none;
-}
-
 
 
 
@@ -338,6 +426,8 @@ footer {
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.082);
 
     }  
+   
+    
     
     footer{
         padding: 10px;

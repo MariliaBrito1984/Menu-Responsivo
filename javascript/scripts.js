@@ -33,6 +33,27 @@ function toggleSection(element) {
   }
 }
 
+/*Configuração do carrossel*/
+
+let count = 1;
+document.getElementById("radio1").checked = true;
+
+setInterval(function(){
+     nextImage();
+}, 4000);
+
+function nextImage(){
+    count ++;
+    if(count > 4){
+        count = 1;
+    }
+    document.getElementById("radio" + count).checked = true; 
+}
+
+
+
+
+/*Configuração rodapé*/
 
 
   window.addEventListener("load", checkFooterPosition);
@@ -58,4 +79,3 @@ function checkFooterPosition() {
 
 
 
-/*Configuração rodapé*/
