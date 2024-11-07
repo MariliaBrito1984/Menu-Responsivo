@@ -107,10 +107,11 @@ header > h1 {
 
 main {
     flex: 1;  
-    width:90vw;     
+    width:90vw; 
+    height: auto;    
     margin: auto;   
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: justify;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);    
     
@@ -399,6 +400,50 @@ div.destaque a:focus{
 }
 
 
+fieldset.form{
+    color: white;
+    letter-spacing: 0.9px;    
+    font-size: 22px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.473);
+    width: 90vw;
+    height: 400px;
+    text-align: center;
+
+    margin-top: 30px;
+    padding: 10px;
+    
+}
+
+.form label{
+    color: #D9B166;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.473);
+    font-weight: bold;
+}
+
+.form input{
+    margin-bottom: 10px;
+    width: 220px;
+}
+
+.form textarea{
+    width: 300px;
+    height: 200px;
+    
+} 
+
+.redes-sociais{
+    display: flex;
+    width: 90vw;
+    height: 300px;
+
+    color: #D9B166;
+    align-items: center;
+    text-align: center;
+
+}
+
 footer {
     padding: 5px;
     background-color: #014023;
@@ -406,8 +451,9 @@ footer {
     font-size: 0.6em;
     text-align: center;
     position: static; /* Por padrão, estático */
-    width: 100%;    
-
+    width: 100%;  
+    
+    
     
 }
 
@@ -477,11 +523,6 @@ footer {
         width: 99vh;
     }
     
-    footer{
-        padding: 10px;
-        font-size: 1em;
-    }    
-
     section.mov{
         display: flex;
         width: 80vw;
@@ -494,4 +535,13 @@ footer {
         justify-content: center;
         
     }
+
+      
+    
+    .footer-fixed {
+        position: absolute;
+        position: fixed;
+        bottom: 0;
+    }
+    
 }  

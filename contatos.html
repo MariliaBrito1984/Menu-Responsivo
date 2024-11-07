@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/media-queries.css">
     <title>Página Contatos</title>
+    
+    <style> main{ box-shadow: none; }</style>
 </head>
 <body>    
 
@@ -33,8 +35,38 @@
 <main>        
     <article>
         <h2>Precisa de ajuda? Fale comigo!</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque repudiandae molestiae laborum enim quas, consectetur quam ab quibusdam quia ipsa delectus commodi cumque aut animi hic quae fugit deleniti nesciunt.</p>
+        <p>Deixe uma mensagem abaixo ou entre em contato pelas redes sociais! Estou à disposição para ajudar no que precisar."</p>
     </article>
+
+    <fieldset class="form">
+        <legend>Dicas de Melhorias</legend>
+
+        <form action="mailto:mariliabrito@live.com" >
+            
+                <label for="inome">Nome:</label> 
+                <input type="text" name="nome" id="inome"> <br>            
+
+            
+                <label for="iemail">E-mail:</label>
+                <input type="email" name="email" id="iemail"> <br>
+            
+            
+                <label for="imsg">Mensagem:</label><br>  
+                <textarea name="msg" id="imsg" placeholder="Futuramente irei melhorar o formulário.Só esta aqui para marcar a Página!"></textarea>
+            
+
+        </form>
+
+    </fieldset>
+
+    <div class="redes-sociais">
+        <p>Futuramente colocarei minhas Redes Sociais</p>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+    </div>
+
 </main>
 
 <footer id="footer">
