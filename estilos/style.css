@@ -375,7 +375,7 @@ footer {
     }
 
     section.mov{display: none};
-
+    section.slider{display: none;}
     
 }
 
@@ -392,13 +392,7 @@ footer {
         
     }
 
-    header > h1{
-        font-size: 2em;        
-    }
-
-    article > h2{
-       font-size: 1.5em;    
-    }
+    
     .menu {
         display: flex;
         max-height: none;
@@ -410,15 +404,12 @@ footer {
     }
 
     main{
-        width: 70vw;
+        width: 99vh;
     }
 
-    article > p{
-        font-size: 1.5em;    
-    }
-
+   
     .menu li a{
-        font-size: 1.5em;  
+        font-size: 1.8em;  
     }
     .nav-menu {
         width: auto;
@@ -427,7 +418,9 @@ footer {
 
     }  
    
-    
+    section.slider{
+        width: 99vh;
+    }
     
     footer{
         padding: 10px;
