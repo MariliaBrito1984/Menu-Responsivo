@@ -56,18 +56,18 @@ function nextImage(){
 /*Configuração rodapé*/
 
 
-  window.addEventListener("load", checkFooterPosition);
+window.addEventListener("load", checkFooterPosition);
 window.addEventListener("resize", checkFooterPosition);
 
 function checkFooterPosition() {
     const footer = document.getElementById("footer");
     const main = document.querySelector("main");
     const footerHeight = footer.offsetHeight;
-    const bodyHeight = document.body.offsetHeight;
+    const mainHeight = main.offsetHeight;
     const windowHeight = window.innerHeight;
 
-    // Verifica se o conteúdo é menor que a altura da janela
-    if (bodyHeight <= windowHeight) {
+    // Verifica se o main + footer são menores que a altura da janela
+    if ((mainHeight + footerHeight) < windowHeight) {
         footer.classList.add("footer-fixed");
     } else {
         footer.classList.remove("footer-fixed");

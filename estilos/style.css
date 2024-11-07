@@ -25,6 +25,11 @@ body{
     background-attachment: fixed;    
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 ::-webkit-scrollbar{
     width: 0;
     height: 0;
@@ -97,16 +102,18 @@ header > h1 {
     color: #014023;
     border-radius: 3px;
 }
+
 /*Configurações das Páginas*/
 
 main {
+    flex: 1;  
     width:90vw;     
     margin: auto;   
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: justify;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);    
-    flex: 1;  
+    
 }
 
 /* Configuração do carrossel*/
@@ -248,49 +255,70 @@ article > p{
     text-indent: 20px;
 }
 
-div.tec{
-    
+/*icones e animações*/
+
+div.tec {    
     display: flex;    
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;       
-    
+    padding-top: 20px;
 }
 
-div.tec-mov{
+div.tec-mov {
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: center;
+    align-items: center; 
 
-    transition: all ease .3s;
+    /* Define a animação para cada div tec-mov */
+    animation: subirDescer ease-in-out infinite;  
 }
 
-div.tec-mov > p{
+/* Defina o efeito de subida e descida */
+@keyframes subirDescer {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Ajuste a altura do movimento */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Defina tempos diferentes para cada div.tec-mov */
+.tec-mov:nth-child(1) {
+    animation-duration: 1.9s;
+}
+
+.tec-mov:nth-child(2) {
+    animation-duration: 2.5s;
+}
+
+.tec-mov:nth-child(3) {
+    animation-duration: 3s;
+}
+
+div.tec-mov > p {
     margin-left: 0;
     padding: 0;
     margin-top: 5px;
     text-indent: 0;
     color: white;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.39);
-
-    box-sizing: border-box;
 }
+
+
 
 div.tec img{
     width: 50px;
-    border-radius: 50%;  
-
+    border-radius: 50%;      
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.425);
 
 }
 
-div.tec-mov:hover, 
-:focus{
-    cursor: pointer;
-
-    transform: translate(3px, 3px);
-}
 
 article > a > h2{
     background-color: #014023;
@@ -345,6 +373,31 @@ article > h4{
     display: none;
 }
 
+div.destaque{
+    display: flex;
+    justify-content: flex-end;
+    color: #014023;    
+    padding-bottom: 10px;
+
+    
+}
+
+div.destaque a{
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    transition: all 1s;
+    cursor: pointer;
+}
+
+div.destaque a:hover,
+div.destaque a:focus{
+    color: #014023;
+    font-size: 0.9em;
+    transform: translate(-2px , -2px );
+}
+
 
 footer {
     padding: 5px;
@@ -353,11 +406,13 @@ footer {
     font-size: 0.6em;
     text-align: center;
     position: static; /* Por padrão, estático */
-    width: 100%;
+    width: 100%;    
+
     
 }
 
 .footer-fixed {
+    position: absolute;
     position: fixed;
     bottom: 0;
 }
