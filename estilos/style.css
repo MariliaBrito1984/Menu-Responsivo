@@ -445,7 +445,7 @@ div.redes{
     color: #D9B166;
 
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     
 }
 
@@ -455,6 +455,7 @@ div.redes{
     box-shadow: 2px 2px 3px #d9b16670;
     
     transition: all 1s;
+    margin-bottom: 70px;
 }
 
 
@@ -568,6 +569,10 @@ footer {
         
     }
 
-         
+    .footer-fixed {
+        position: absolute;
+        position: fixed;
+        bottom: 0;
+    }
     
 }  
