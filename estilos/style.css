@@ -111,7 +111,7 @@ main {
     height: auto;    
     margin: auto;   
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: justify;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);    
     
@@ -463,6 +463,10 @@ div.redes{
     transform: translate(-3px , -3px);
 }
 
+div.empurra{
+    min-height: 100px;
+}
+
 footer {
     padding: 5px;
     background-color: #014023;
@@ -489,13 +493,24 @@ footer {
 
 
 @media print{
+
+    body {
+        padding: 10px;
+        font-family: 'Courier New', Courier, monospace;        
+    }
     .material-symbols-outlined, .menu, .menu lu {
-        display: none;
-        
+        display: none;        
     }
 
-    section{display: none};
     section{display: none;}
+    div.tec{display: none;}
+
+    footer{display: none;}
+
+    .form{display: none;}
+    .redes{display: none;}
+    .redes-sociais{display: none;}
+
     
 }
 
