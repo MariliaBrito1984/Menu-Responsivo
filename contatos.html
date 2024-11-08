@@ -39,32 +39,49 @@
     </article>
 
     <fieldset class="form">
-        <legend>Dicas de Melhorias</legend>
+        <legend>Dicas & Melhorias</legend>
 
-        <form action="mailto:mariliabrito@live.com" >
+        <form action="mailto:mariliabrito@live.com" method="post"  autocomplete="on">
             
                 <label for="inome">Nome:</label> 
-                <input type="text" name="nome" id="inome"> <br>            
+                <input type="text" name="nome" id="inome" autocomplete="name" required> <br>            
 
             
                 <label for="iemail">E-mail:</label>
-                <input type="email" name="email" id="iemail"> <br>
+                <input type="email" name="email" id="iemail" autocomplete="email" required> <br>
             
             
                 <label for="imsg">Mensagem:</label><br>  
                 <textarea name="msg" id="imsg" placeholder="Futuramente irei melhorar o formulário.Só esta aqui para marcar a Página!"></textarea>
-            
+
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+                
 
         </form>
 
     </fieldset>
 
+    
+    <div class="redes">
+        <h2>Minhas Redes Sociais</h2>
+    </div>
+
+
+
     <div class="redes-sociais">
-        <p>Futuramente colocarei minhas Redes Sociais</p>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
+        
+        <abbr title="whatsapp"><a href="https://wa.me/5521994442662"><img src="imagens/phone.png" alt="logo whatsapp"></a></abbr>
+
+        <abbr title="Telegram"><a href="https://t.me/MariliaBritoEvangelista" target="_blank"><img src="imagens/telegram.png" alt="logo Telegram"></a></abbr>
+
+        <abbr title="linkedin"><a href="https://www.linkedin.com/in/marilia-evangelista-0b5882284/" target="_blank"><img src="imagens/download.png" alt="logo linkedin"></a></abbr>
+
+        <abbr title="instagram"><a href="https://www.instagram.com/mariliabritoevangelista/" target="_blank"><img src="imagens/Instagram.png" alt="logo instagram"></a></abbr>
+        
+
+        <abbr title="facebook"><a href="https://www.facebook.com/profile.php?id=100090623363107" target="_blank"><img src="imagens/facebook.png" alt="logo facebook"></a></abbr>
+        
     </div>
 
 </main>

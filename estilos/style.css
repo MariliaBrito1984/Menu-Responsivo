@@ -152,7 +152,9 @@ section.slider{
     height: 100%;
     background-size: cover;
     
+    
 }
+
 .manual-navigation{
     position: absolute;
     display: flex;    
@@ -421,10 +423,6 @@ fieldset.form{
     font-weight: bold;
 }
 
-.form input{
-    margin-bottom: 10px;
-    width: 220px;
-}
 
 .form textarea{
     width: 300px;
@@ -434,12 +432,35 @@ fieldset.form{
 
 .redes-sociais{
     display: flex;    
-    height: 300px;
 
-    color: #D9B166;
+    
     align-items: center;
-    text-align: center;
+    justify-content: space-around;
+    padding: 20px;
+}
 
+
+div.redes{
+    text-align: center;
+    color: #D9B166;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.redes-sociais img{
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #d9b16670;
+    
+    transition: all 1s;
+}
+
+
+.redes-sociais img:hover,
+.redes-sociais img:focus{
+    transform: translate(-3px , -3px);
 }
 
 footer {
@@ -485,8 +506,7 @@ footer {
     }
 
     header{
-        display: flex;
-        height: 8vw;
+        display: flex;        
         justify-content: center;
         
     }
@@ -494,8 +514,7 @@ footer {
     
     .menu {
         display: flex;
-        max-height: none;
-        padding: 10px;
+        max-height: none;        
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.527);
         flex-direction: row;
         justify-content: space-around;
@@ -503,7 +522,7 @@ footer {
     }
 
     main{
-        width: 99vh;
+        width: 90vh;
     }
 
    
@@ -518,12 +537,12 @@ footer {
     }  
    
     section.slider{
-        width: 99vh;
+        width: 90vh;
     }
     
     section.mov{
         display: flex;
-        width: 80vw;
+        width: 80vh;
         height: 300px;
         margin: auto;
         margin-top: 10px;
@@ -534,12 +553,6 @@ footer {
         
     }
 
-      
-    
-    .footer-fixed {
-        position: absolute;
-        position: fixed;
-        bottom: 0;
-    }
+         
     
 }  
