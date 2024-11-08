@@ -1,3 +1,15 @@
+function ajustarAlturaBody() {
+    // Define a altura do body para cobrir toda a tela
+    document.body.style.minHeight = `${window.innerHeight}px`;
+  }
+  
+  // Chama a função inicialmente para ajustar o tamanho
+  ajustarAlturaBody();
+  
+  // Adiciona um ouvinte de evento para redimensionar a altura do body ao redimensionar a janela
+  window.onresize = ajustarAlturaBody;
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
